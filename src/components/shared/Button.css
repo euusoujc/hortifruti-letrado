@@ -1,0 +1,57 @@
+.botao {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 30px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    opacity 0.12s ease;
+}
+
+.botao:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.botao:active:not(:disabled) {
+  transform: translateY(2px);
+}
+
+.botao:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.botao--primaria {
+  background: var(--cor-primaria);
+  color: #fff;
+  box-shadow: 0 5px 0 var(--cor-primaria-escura);
+}
+
+.botao--primaria:active:not(:disabled) {
+  box-shadow: 0 2px 0 var(--cor-primaria-escura);
+}
+
+.botao--secundaria {
+  background: var(--cor-secundaria);
+  color: #fff;
+  box-shadow: 0 5px 0 var(--cor-secundaria-escura);
+}
+
+.botao--secundaria:active:not(:disabled) {
+  box-shadow: 0 2px 0 var(--cor-secundaria-escura);
+}
+
+.botao--fantasma {
+  background: var(--cor-card);
+  color: var(--cor-texto);
+  border: 3px solid var(--cor-borda);
+}
+
+.botao--fantasma:active:not(:disabled) {
+  transform: translateY(1px);
+}

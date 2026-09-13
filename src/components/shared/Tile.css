@@ -1,0 +1,63 @@
+.tile {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 2px solid var(--cor-borda);
+  background: var(--cor-card);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--cor-texto);
+  text-transform: uppercase;
+}
+
+@keyframes tile-revelar {
+  0% {
+    transform: rotateX(0deg) scale(1);
+  }
+  45% {
+    transform: rotateX(90deg) scale(1.05);
+  }
+  55% {
+    transform: rotateX(90deg) scale(1.05);
+  }
+  100% {
+    transform: rotateX(0deg) scale(1);
+  }
+}
+
+.tile--revelar {
+  animation: tile-revelar 0.5s ease-in-out both;
+}
+
+.tile--atual {
+  border-color: var(--cor-primaria);
+}
+
+.tile--correta {
+  background: var(--cor-acerto);
+  border-color: var(--cor-acerto);
+  color: #fff;
+}
+
+.tile--presente {
+  background: var(--cor-amarelo);
+  border-color: var(--cor-amarelo);
+  color: #3b2a1e;
+}
+
+.tile--ausente {
+  background: #d8cfc2;
+  border-color: #d8cfc2;
+  color: #6b5645;
+}
+
+@media (max-width: 420px) {
+  .tile {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+}

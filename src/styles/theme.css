@@ -1,0 +1,33 @@
+:root {
+  --cor-fundo: #fff8ed;
+  --cor-fundo-alt: #fbeed9;
+  --cor-texto: #3b2a1e;
+  --cor-texto-suave: #6b5645;
+
+  --cor-primaria: #f08a3c;
+  --cor-primaria-escura: #c96a21;
+  --cor-secundaria: #57ab52;
+  --cor-secundaria-escura: #356934;
+  --cor-acento: #e0564a;
+  --cor-amarelo: #f7c948;
+  --cor-azul: #4aa3d9;
+  --cor-azul-escuro: #2f7fb0;
+  --cor-roxo: #9b72cf;
+  --cor-roxo-escuro: #7952ab;
+
+  --cor-acerto: #4caf50;
+  --cor-acerto-fundo: #e6f6e6;
+  --cor-erro: #e3453a;
+  --cor-erro-fundo: #fbe8e6;
+
+  --cor-card: #ffffff;
+  --cor-borda: #f0dcbc;
+  --cor-sombra: rgba(59, 42, 30, 0.16);
+  --cor-bloqueado: #cfc3b3;
+
+  --raio-borda: 20px;
+  --raio-borda-grande: 32px;
+
+  --fonte-base:
+    'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}

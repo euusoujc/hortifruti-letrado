@@ -1,0 +1,62 @@
+.rodada-multipla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.rodada-multipla__instrucao {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.rodada-multipla__imagem {
+  background: var(--cor-card);
+  border: 4px solid var(--cor-borda);
+  border-radius: var(--raio-borda-grande);
+  padding: 24px;
+  box-shadow: 0 6px 0 var(--cor-sombra);
+}
+
+.rodada-multipla__opcoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  width: 100%;
+}
+
+.rodada-multipla__opcoes--imagens {
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+}
+
+.rodada-multipla__progresso {
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.palavra-clicavel {
+  border: none;
+  background: var(--cor-primaria);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 14px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 var(--cor-primaria-escura);
+  transition: transform 0.12s ease;
+}
+
+.palavra-clicavel:hover {
+  transform: translateY(-2px);
+}
+
+.palavra-clicavel:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--cor-primaria-escura);
+}

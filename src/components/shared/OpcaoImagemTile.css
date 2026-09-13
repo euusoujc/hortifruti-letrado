@@ -1,0 +1,27 @@
+.opcao-imagem-tile {
+  border: 3px solid var(--cor-borda);
+  background: var(--cor-card);
+  border-radius: var(--raio-borda);
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  transition:
+    transform 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.opcao-imagem-tile:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.03);
+  border-color: var(--cor-primaria);
+}
+
+.opcao-imagem-tile:disabled {
+  cursor: not-allowed;
+}
+
+.opcao-imagem-tile:disabled:not(.animar-erro):not(.animar-acerto) {
+  opacity: 0.55;
+}

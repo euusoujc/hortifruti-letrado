@@ -1,0 +1,116 @@
+.memoria-dinheiro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.memoria-dinheiro__instrucao {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.memoria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .memoria-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.memoria-carta {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--raio-borda);
+  border: 3px solid var(--cor-borda);
+  background: var(--cor-card);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.memoria-carta:not(:disabled):hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: var(--cor-primaria);
+}
+
+.memoria-carta:disabled {
+  cursor: default;
+}
+
+.memoria-carta--virada {
+  animation: surgir 0.3s ease-out;
+  border-color: var(--cor-primaria);
+}
+
+.memoria-carta--combinada {
+  border-color: var(--cor-acerto);
+  background: var(--cor-acerto-fundo);
+  opacity: 0.85;
+}
+
+.memoria-carta__verso {
+  opacity: 0.85;
+}
+
+.carta-dinheiro__valor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--cor-primaria-escura);
+}
+
+.carta-dinheiro__cifrao {
+  font-size: 0.7rem;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.carta-dinheiro__valor strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.carta-dinheiro__quantidade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.carta-dinheiro__icones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  justify-content: center;
+  max-height: 44px;
+  overflow: hidden;
+}
+
+.carta-dinheiro__legenda {
+  font-size: 0.62rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--cor-texto-suave);
+  line-height: 1.15;
+}
+
+.memoria-dinheiro__progresso {
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+  margin: 0;
+}

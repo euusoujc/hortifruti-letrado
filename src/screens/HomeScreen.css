@@ -1,0 +1,29 @@
+.home-boas-vindas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--cor-card);
+  border: 3px solid var(--cor-borda);
+  border-radius: var(--raio-borda-grande);
+  padding: 16px 20px;
+  box-shadow: 0 4px 0 var(--cor-sombra);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-boas-vindas::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--cor-amarelo);
+  opacity: 0.25;
+}
+
+.home-boas-vindas p {
+  margin: 0;
+  font-size: 1rem;
+}

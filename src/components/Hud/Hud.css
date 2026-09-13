@@ -1,0 +1,61 @@
+.hud {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 0 4px;
+}
+
+.hud__linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hud__titulo {
+  flex: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.hud__icone {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid var(--cor-borda);
+  background: var(--cor-card);
+  box-shadow: 0 4px 0 var(--cor-sombra);
+  font-size: 1.2rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.12s ease;
+}
+
+.hud__icone:hover {
+  transform: translateY(-2px);
+}
+
+.hud__icone--espaco {
+  visibility: hidden;
+  box-shadow: none;
+}
+
+.hud__pontos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hud__ponto {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--cor-bloqueado);
+}
+
+.hud__ponto--ativo {
+  background: var(--cor-primaria);
+}

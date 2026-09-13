@@ -1,0 +1,43 @@
+.resultado {
+  align-items: center;
+  text-align: center;
+  padding-top: 24px;
+}
+
+.resultado h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.resultado__fase {
+  margin: 0;
+  color: var(--cor-texto-suave);
+}
+
+.resultado__estrelas {
+  display: flex;
+  gap: 10px;
+  font-size: 2.4rem;
+}
+
+.resultado__estrela {
+  opacity: 0.5;
+}
+
+.resultado__estrela--ativa {
+  opacity: 1;
+  animation: pulsar-estrela 0.5s ease-out both;
+}
+
+.resultado__mensagem {
+  font-size: 1.05rem;
+  font-weight: 600;
+  max-width: 420px;
+}
+
+.resultado__acoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

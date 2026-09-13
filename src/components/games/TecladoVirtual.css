@@ -1,0 +1,72 @@
+.teclado {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+}
+
+.teclado__linha {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  width: 100%;
+}
+
+.teclado__linha--acentos {
+  flex-wrap: wrap;
+  border-top: 1px dashed var(--cor-borda);
+  padding-top: 8px;
+  margin-top: 2px;
+}
+
+.teclado__tecla {
+  flex: 1;
+  min-width: 0;
+  max-width: 42px;
+  height: 46px;
+  border-radius: 8px;
+  border: none;
+  background: #e4d8c4;
+  color: var(--cor-texto);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.teclado__tecla:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.teclado__tecla:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.teclado__tecla--especial {
+  max-width: 64px;
+  font-size: 0.8rem;
+}
+
+.teclado__tecla--acento {
+  max-width: 32px;
+  height: 38px;
+  font-size: 0.85rem;
+  flex: 0 0 auto;
+}
+
+.teclado__tecla--correta {
+  background: var(--cor-acerto);
+  color: #fff;
+}
+
+.teclado__tecla--presente {
+  background: var(--cor-amarelo);
+  color: #3b2a1e;
+}
+
+.teclado__tecla--ausente {
+  background: #b8ac9b;
+  color: #fff;
+}
