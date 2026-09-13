@@ -30,15 +30,25 @@ npm run build:portatil
 
 O arquivo fica em `dist-portatil/index.html`. Basta copiar esse único arquivo (pode renomeá-lo, ex. `HortifrutiLetrado.html`) e distribuir.
 
+`MVP.html`, na raiz do projeto, é um snapshot já pronto dessa versão portátil (gerado e commitado para ficar acessível direto do repositório). Para atualizá-lo depois de mudanças no jogo, rode `npm run build:portatil` e copie `dist-portatil/index.html` por cima de `MVP.html`.
+
 ## Estrutura
 
-- `src/data` — banco de palavras (frutas/verduras) e definição das fases.
-- `src/assets/svg` — ilustrações das frutas/verduras (SVG desenhado no código).
+- `src/data` — banco de palavras (frutas/verduras), pares de dinheiro e definição das fases.
+- `src/assets/svg` — ilustrações das frutas/verduras/dinheiro (SVG desenhado no código).
 - `src/assets/mascote` — mascote da feira.
 - `src/audio` — efeitos sonoros (Web Audio API) e leitura de palavras em voz alta.
-- `src/components/games` — os três modos de jogo: Associação, Correção Ortográfica e Termo da Horta.
+- `src/components/games` — os modos de jogo: Associação (imagem→nome e nome→imagem), Correção Ortográfica, Termo da Horta e Jogo da Memória do Dinheiro.
 - `src/screens` — telas principais (mapa de fases, fase em andamento, resultado).
+
+## Fases atuais
+
+1. **Frutas do dia a dia** — Associação, Correção Ortográfica e Termo.
+2. **Verduras e Legumes** — Associação invertida (toca a palavra pra ouvir, encontra a imagem), Correção Ortográfica e Termo.
+3. **Dinheiro da Feira** — Jogo da memória relacionando valores (R$) a quantidades de moedas/cédulas.
+
+Todas as fases estão desbloqueadas por padrão (`requisitos: []` em `src/data/fases.ts`) para facilitar testes. Para restaurar a progressão sequencial, defina `requisitos` com o id da fase anterior.
 
 ## Adicionando novas fases
 
-Para expandir com novos temas, adicione itens em `src/data/items.ts` e uma nova fase em `src/data/fases.ts`. Cada fase reaproveita automaticamente os três modos de jogo.
+Para expandir com novos temas, adicione itens em `src/data/items.ts` e uma nova fase em `src/data/fases.ts`, escolhendo a sequência de `rodadas` (`associacao`, `associacao-invertida`, `ortografia`, `termo` ou `memoria-dinheiro`).
